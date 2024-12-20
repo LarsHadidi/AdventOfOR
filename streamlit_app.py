@@ -6,8 +6,8 @@ def objective(n, a, l ,g, w, max_n, max_a):
 
 st.title("Optimal Estate")
 st.write('Editable source data')
-df = pd.read_csv('estate.csv', sep=';', index_col='ID')
-edited_df = st.data_editor(df)
+source_df = pd.read_csv('estate.csv', sep=';', index_col='ID')
+df = st.data_editor(source_df)
 
 max_neighbours = df['Neighbours'].max()
 max_area = df['Area'].max()
